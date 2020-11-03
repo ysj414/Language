@@ -13,7 +13,7 @@
  * Union shares the biggest memory in its members. 
  * Once a member variable is saved a value, other members can't use 
  * memory.
- * So, we can use all of members when we assign a value once  at a time.
+ * So, we can use all of members when we assign a value once at a time.
  *
  * In summary, When system doesn't need to access several members, 
  * it is advantegeous to use Union because it arrange size with biggest memmory in its members.
@@ -32,6 +32,7 @@ int main(void)
 
         printf("Sizeof union: %d\n", sizeof(b1));
 		strcpy(b1.doll, "bear");
+//		b1.snack=8.00; /* if this is activated only b1.snack variable can be used. */  
 
 		printf("%d\n", b1.candy);
 		printf("%f\n", b1.snack);
