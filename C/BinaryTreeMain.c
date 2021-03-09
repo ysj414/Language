@@ -32,6 +32,7 @@ int main(void)
 	printf("\n");
 	PostorderTraverse(bt1,ShowData);
 	printf("\n");
+	DeleteTree(bt1);
 	return 0;
 }
 void ShowData(int data)

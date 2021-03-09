@@ -46,6 +46,18 @@ void MakeRightSubTree(BTreeNode *main, BTreeNode *sub)
 
 	main->right = sub;
 }
+
+void DeleteTree(BTreeNode *bt)
+{
+	if(bt->left)
+		DeleteTree(bt->left);
+	if(bt->right)
+		DeleteTree(bt->right);
+//	printf("delete: %d\n",bt->data);
+	free(bt);
+}
+
+
 void InorderTraverse(BTreeNode *bt, VisitFuncPtr action)
 {
     if(bt == NULL)
@@ -72,3 +84,4 @@ void PostorderTraverse(BTreeNode *bt, VisitFuncPtr action)
     PostorderTraverse(bt->right,action);
 	action(bt->data);
 }
+
