@@ -49,10 +49,10 @@ void MakeRightSubTree(BTreeNode *main, BTreeNode *sub)
 
 void DeleteTree(BTreeNode *bt)
 {
-	if(bt->left)
-		DeleteTree(bt->left);
-	if(bt->right)
-		DeleteTree(bt->right);
+	if(bt == NULL)
+		return;
+	DeleteTree(bt->left);
+	DeleteTree(bt->right);
 //	printf("delete: %d\n",bt->data);
 	free(bt);
 }
