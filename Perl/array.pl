@@ -31,6 +31,12 @@ print $array[-5]; # "these"
 print $array[-6]; # "print"
 print $array[-7]; # 경고 발생, undef 반환, ""가 출력됨
 
+print "\n";
+print @ARGV;
+print "\n";
+print $ARGV[0];
+print $ARGV[-1];
+
 #배열의 길이를 구하려면 다음과 같이 한다:
 
 print "This array has ".(scalar @array)."elements\n"; # "This array has 6 elements"

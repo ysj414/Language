@@ -1,24 +1,24 @@
 use strict;
 use warnings;
 
-(
-  "print",
-  "these",
-  "strings",
-  "out",
-  "for",
-  "me",
-  )
+#(
+#  "print",
+#  "these",
+#  "strings",
+#  "out",
+#  "for",
+#  "me",
+#  );
+#
+#(
+# "Newton" => "Isaac",
+# "Einstein" => "Albert",
+# "Darwin" => "Charles",
+# );
 
-(
- "Newton" => "Isaac",
- "Einstein" => "Albert",
- "Darwin" => "Charles",
- )
 
-
-("one", 1, "three", 3, "five", 5)
-("one" =>1, "three"=> 3, "five" => 5)
+#("one", 1, "three", 3, "five", 5);
+#("one" =>1, "three"=> 3, "five" => 5);
 
 #리스트 중첩
 
@@ -45,7 +45,7 @@ print $array[6];
 
 # same result
 
-my $hash = (
+my %hash = (
 		"beer" => "good",
 		"bananas" =>(
 			"green" => "wait",
@@ -59,3 +59,13 @@ print $hash{"beer"};
 print $hash{"bananas"};
 print $hash{"wait"};
 print $hash{"eat"};    #undef, warning, output ""
+print "\n";
+
+
+print "####\n";
+my @bones = ("humerus", ("jaw", "skull"), "tibia");
+my @fingers = ("thumb", "index", "middle", "ring", "little");
+my @parts = (@bones, @fingers, ("foot", "toes"), "eyeball",
+		"knuckle");
+print @parts;
+
