@@ -11,6 +11,7 @@ in_addr_t inet_addr(const char *op);
 in_addr_t inet_network(const char *op);
 char *inet_ntoa(struct in_addr in);
 struct in_addr inet_makeaddr(int net, int host);
+int inet_pton(int af, const char *restrict src, void *restrict dst);
 
 typedef uint32_t in_addr_t;
 
@@ -73,8 +74,9 @@ struct in_addr
  * given in network byte order, to a string in IPv4 dotted-decimal notation.
  * u_int32 value (big endian) -> "1.1.1.1"
  * 
- *
- *
+ * inet_pton() 
+ * This function converts the characters string src into a network address structure in the `af` address family, the copies the network address structure to dst. The 'af' argument must be either AF_INET or AF_INET6. dst is written in network byte order. 
+ * example inet_pton(AF_INET, "192.168.197.1", &addr);
  */
 
 
